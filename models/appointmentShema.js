@@ -24,29 +24,25 @@ const doctorSchema = mongoose.Schema({
     trim: true,
     lowercase: true,
   },
-  joinData: {
+  appointData: {
     type: String,
     require: true,
     default: new Date().toDateString(),
   },
-  joinTime: {
+  appointTime: {
     type: String,
     require: true,
     default: new Date().toTimeString(),
   },
-  userName: {
+  region: {
     type: String,
     required: true,
     trim: true,
   },
-  imgPath: {
+  note: {
     type: String,
     require: true,
-  },
-  gender: {
-    type: String,
-    require: true,
-    enum: ["Female", "Male"],
+    trim: true,
   },
   iHealth: {
     type: String,
@@ -57,15 +53,6 @@ const doctorSchema = mongoose.Schema({
     type: String,
     require: true,
     enum: ["Credit Card", "Debit Card", "Case Money"],
-  },
-  cabinNumber: {
-    type: Number,
-    require: true,
-  },
-  loginPermision: {
-    type: String,
-    require: true,
-    enum: ["hostpital", "any"],
   },
 });
 
